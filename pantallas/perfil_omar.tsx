@@ -10,6 +10,7 @@ import {
     useColorScheme,
     View,
   } from 'react-native';
+import Evaluacion from '../components/evaluacion/Evaluacion';
 
 const Perfil_Omar = ({navigation}) => {
   const handlePress = () => {
@@ -21,12 +22,14 @@ const Perfil_Omar = ({navigation}) => {
           contentContainerStyle={styles.svContenedor}
           contentInsetAdjustmentBehavior="automatic">
             <Image 
-            style={styles.fotoPerfil}
-            source={require('../imagenes/fotoPerfil.png')}/>
+                style={styles.fotoPerfil}
+                source={require('../imagenes/fotoPerfil.png')}/>  
+                <Evaluacion 
+                calificacion={1.5}/>           
                    <Text style={styles.encabezado}>Omar Castellanos</Text>
-           <View style={styles.seccion}> 
-            <Text style={styles.subtitulo}>Fecha de nacimiento:</Text>
-            <Text style={styles.cuerpo}>01 de Octubre de 1999</Text>
+            <View style={styles.seccion}> 
+                <Text style={styles.subtitulo}>Fecha de nacimiento:</Text>
+                <Text style={styles.cuerpo}>01 de Octubre de 1999</Text>
             </View >
             <View>
               <Text style={styles.seccion}>
