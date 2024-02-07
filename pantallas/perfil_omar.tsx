@@ -13,6 +13,11 @@ import {
 import Evaluacion from '../components/evaluacion/Evaluacion';
 
 const Perfil_Omar = ({navigation}) => {
+  const [calificacion, setCalificacion]= useState(0);
+  const handleCalificacionChange = (valor:number)=>{
+  setCalificacion  (valor);
+    //    console.log(calificacion);
+  }
   const handlePress = () => {
     navigation.navigate('Home');
     };
@@ -25,7 +30,9 @@ const Perfil_Omar = ({navigation}) => {
                 style={styles.fotoPerfil}
                 source={require('../imagenes/fotoPerfil.png')}/>  
                 <Evaluacion 
-                calificacion={1.5}/>           
+                calificacion={calificacion}
+                onCalificacionChange={handleCalificacionChange}
+                />           
                    <Text style={styles.encabezado}>Omar Castellanos</Text>
             <View style={styles.seccion}> 
                 <Text style={styles.subtitulo}>Fecha de nacimiento:</Text>

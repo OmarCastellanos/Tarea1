@@ -7,6 +7,7 @@ import StarHalf from "./StarHalf";
 
 export type EvalProps= {
     calificacion : number;
+    onCalificacionChange: any;
 };
 
 export type StarProp = {
@@ -16,14 +17,15 @@ export type StarProp = {
 
 const Evaluacion = (props: EvalProps) => {
     const handleOnClick =(posicion:number)=>{
-        console.log(posicion);
+        props.onCalificacionChange(posicion+1)
+//        console.log(posicion);
     }
 // Limita la calificación entre 0 y 5
-    const calificacion = Math.min(Math.max(props.calificacion, 0), 5);
+    const valor = Math.min(Math.max(props.calificacion, 0), 5);
 
 // Calcula el número de estrellas llenas y medias
-    const estrellasLlenas = Math.floor(calificacion);
-    const tieneMediaEstrella = calificacion % 1 !== 0;
+    const estrellasLlenas = Math.floor(valor);
+    const tieneMediaEstrella = valor % 1 !== 0;
 
 // Array para almacenar las estrellas
     const estrellas = [];

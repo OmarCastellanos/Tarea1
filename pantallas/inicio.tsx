@@ -16,7 +16,7 @@ const Inicio = ({navigation}) =>{
             style={styles.logo}
             source={require('../imagenes/LogoUJCV.png')}/>
             <Text style={styles.cuerpo}>Programacion de dispositivos moviles</Text>
-            <Text style={styles.subtitulo}>Tarea 1</Text>
+            <Text style={styles.subtitulo}>Tarea 2</Text>
             <Text style={styles.subtitulo}>Catedratico</Text>
             <Text style={styles.cuerpo}>Ing. Carlos Solorzano</Text>
             <Text style={styles.subtitulo}>Alumno </Text>

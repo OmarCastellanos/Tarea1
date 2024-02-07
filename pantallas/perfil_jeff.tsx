@@ -10,8 +10,14 @@ import {
     useColorScheme,
     View,
   } from 'react-native';
+import Evaluacion from '../components/evaluacion/Evaluacion';
 
 const Perfil_Jeff = ({navigation}) => {
+  const [calificacion, setCalificacion]= useState(0);
+  const handleCalificacionChange = (valor:number)=>{
+  setCalificacion  (valor);
+    //    console.log(calificacion);
+  }
   const handlePress = () => {
     navigation.navigate('Home');
     };
@@ -23,6 +29,10 @@ const Perfil_Jeff = ({navigation}) => {
             <Image 
             style={styles.fotoPerfil}
             source={require('../imagenes/JeffBezos.jpg')}/>
+            <Evaluacion 
+                calificacion={calificacion}
+                onCalificacionChange={handleCalificacionChange}
+                />   
                    <Text style={styles.encabezado}>Jeff Bezos</Text>
            <View style={styles.seccion}> 
             <Text style={styles.subtitulo}>Fecha de nacimiento:</Text>
